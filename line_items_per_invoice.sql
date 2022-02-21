@@ -1,0 +1,3 @@
+SELECT COUNT(*)
+FROM InvoiceLine
+GROUP BY InvoiceId

@@ -1,4 +1,9 @@
-SELECT Employee.FirstName, Employee.LastName, Invoice.Id
-FROM Employee
-LEFT JOIN Invoice
-ON Customer.customerID = Invoice.customerID
+SELECT e.FirstName || " " || e.LastName as "FullName", 
+i.InvoiceId
+From Employee e 
+    JOIN Customer c on c.SupportRepId = e.EmployeeId
+    JOIN Invoice i on i.CustomerId = c.CustomerId
+
+
+
+
