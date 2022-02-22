@@ -1,7 +1,7 @@
 SELECT InvoiceDate as Year 
-    COUNT(*) as InvoiceCount
+    -- COUNT(*) as InvoiceCount
 FROM Invoice
-Where InvoiceDate BETWEEN '2009' AND '2011'
+Where InvoiceDate IN ('2009', '2011')
 
 
 SELECT strftime('%Y', InvoiceDate) as Year,
